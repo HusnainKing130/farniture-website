@@ -1,0 +1,3116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wooden Header</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: #f8f8f8;
+}
+
+/* HEADER */
+header{
+    width:100%;
+    background: #4A6A5D;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* LOGO */
+.logo{
+    color:#F5F5DC;
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+/* MENU */
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-menu a{
+    color:#F5F5DC;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:500;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#F5F5DC;
+    transition:.3s;
+}
+
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+.nav-menu a:hover{
+    opacity:.8;
+}
+
+/* RIGHT ICONS */
+.right-icons{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.right-icons i{
+    color:#F5F5DC;
+    font-size:1.3rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.right-icons i:hover{
+    transform:translateY(-3px);
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle{
+    display:none;
+    color:#F5F5DC;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:900px){
+
+    .navbar{
+        padding:16px 20px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#556B2F;
+        flex-direction:column;
+        gap:25px;
+        padding:25px 0;
+        display:none;
+        box-shadow:0 10px 20px rgba(0,0,0,.15);
+    }
+
+    .nav-menu.active{
+        display:flex;
+    }
+
+    .right-icons{
+        margin-left:auto;
+        margin-right:15px;
+    }
+
+    .logo{
+        font-size:1.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.hero{
+    min-height:100vh;
+    background: #4A6A5D;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 8%;
+    gap:70px;
+    overflow:hidden;
+}
+
+/* LEFT CONTENT */
+.hero-content{
+    flex:1;
+    max-width:600px;
+}
+
+.hero-content h1{
+    color:#fff;
+    font-size:4rem;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:8px;
+}
+
+.hero-content h2{
+    color:#fff;
+    font-size:4rem;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    color: #f1f1f1;
+    font-size:1rem;
+    line-height:1.8;
+    max-width:520px;
+    margin-bottom:35px;
+}
+
+/* BUTTONS */
+.btn-group{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.4s ease;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:#fff;
+    color:#000;
+    border:2px solid #fff;
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px);
+}
+
+.btn-secondary{
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+}
+
+.btn-secondary:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* RIGHT IMAGE */
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:650px;
+    border-radius:30px;
+    object-fit:cover;
+    box-shadow:0 25px 50px rgba(0,0,0,.25);
+    transition:.5s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.03);
+}
+
+/* Floating Decoration */
+.hero-image{
+    position:relative;
+}
+
+.circle{
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:rgba(255,255,255,.12);
+    border-radius:50%;
+}
+
+.circle.one{
+    top:-25px;
+    right:30px;
+}
+
+.circle.two{
+    bottom:-20px;
+    left:30px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px){
+
+.hero-content h1,
+.hero-content h2{
+    font-size:3rem;
+}
+
+.hero{
+    gap:40px;
+}
+}
+
+@media (max-width: 768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero-content{
+    order:2;
+}
+
+.hero-image{
+    order:1;
+}
+
+.hero-content p{
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.btn-group{
+    justify-content:center;
+}
+
+.hero-content h1,
+.hero-content h2{
+    font-size:2.4rem;
+}
+
+.hero-image img{
+    max-width:100%;
+}
+}
+
+@media (max-width: 480px){
+
+.hero-content h1,
+.hero-content h2{
+    font-size:2rem;
+}
+
+.hero-content p{
+    font-size:.95rem;
+}
+
+.btn{
+    width:100%;
+    text-align:center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* A = Main Section */
+.A{
+    width:100%;
+    background:#fff;
+    padding:90px 8%;
+}
+
+/* B = Container */
+.B{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+/* C = Left Content */
+.C{
+    flex:1;
+}
+
+.C h1{
+    font-size:4rem;
+    line-height:1.05;
+    color:#000;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.C p{
+    font-size:16px;
+    line-height:1.9;
+    color: #444;
+    max-width:560px;
+    margin-bottom:35px;
+}
+
+/* D = Button */
+.D{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 35px;
+    border:none;
+    border-radius:50px;
+    background:#000;
+    color: #fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.D:hover{
+    transform:translateY(-4px);
+    background: #1d1d1d;
+}
+
+/* E = Right Side */
+.E{
+    flex:1;
+}
+
+/* F = Cards */
+.F{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* G = Card */
+.G{
+    background:#fff;
+    border-radius:28px;
+    padding:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.4s;
+    position:relative;
+}
+
+.G:hover{
+    transform:translateY(-8px);
+}
+
+/* Highlight First Card */
+.G.active{
+    background: #D9E2C3;
+}
+
+.G img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.G h3{
+    margin-top:18px;
+    font-size:20px;
+    color:#000;
+}
+
+.G p{
+    margin-top:8px;
+    color: #555;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.price{
+    margin-top:15px;
+    font-size:22px;
+    font-weight:700;
+    color:#000;
+}
+
+/* H = Arrow Button */
+.H{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:18px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.H:hover{
+    transform:scale(1.08);
+}
+
+.H span{
+    color:#fff;
+    font-size:22px;
+}
+
+/* Tablet */
+@media(max-width:1100px){
+
+    .B{
+        flex-direction:column;
+        gap:50px;
+    }
+
+    .C{
+        text-align:center;
+    }
+
+    .C p{
+        margin:auto auto 30px;
+    }
+
+    .F{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .A{
+        padding:60px 20px;
+    }
+
+    .C h1{
+        font-size:2.6rem;
+    }
+
+    .F{
+        grid-template-columns:1fr;
+    }
+
+    .G img{
+        height:260px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   1 = Main Section
+========================== */
+.1{
+    width:100%;
+    background:#ffffff;
+    padding:100px 8%;
+}
+
+/* CSS classes cannot start directly with numbers,
+   so using c1, c2, c3, c4, c5, c6 */
+
+.c1{
+    width:100%;
+    background:#fff;
+    padding:100px 8%;
+}
+
+.c2{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.c3{
+    flex:1;
+}
+
+.c3 h2{
+    font-size:55px;
+    color:#000;
+    line-height:1.1;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.c3 .desc{
+    color:#555;
+    font-size:16px;
+    line-height:1.8;
+    max-width:550px;
+    margin-bottom:45px;
+}
+
+/* Features Grid */
+.c4{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.c5{
+    background:#fff;
+    padding:25px;
+    border-radius:24px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:.4s ease;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.c5.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.c5:hover{
+    transform:translateY(-8px);
+}
+
+.c5 i{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background: #E5ECD5;
+    color: #4A5A31;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    margin-bottom:18px;
+}
+
+.c5 h3{
+    color:#000;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.c5 p{
+    color:#666;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* Right Image */
+.c6{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.c6 img{
+    width:100%;
+    max-width:520px;
+    border-radius:35px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.12);
+    animation:float 4s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Tablet */
+@media(max-width:1024px){
+
+    .c2{
+        flex-direction:column;
+    }
+
+    .c3{
+        width:100%;
+    }
+
+    .c6{
+        width:100%;
+    }
+
+    .c3 h2{
+        font-size:45px;
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .c1{
+        padding:70px 20px;
+    }
+
+    .c3 h2{
+        font-size:34px;
+        text-align:center;
+    }
+
+    .c3 .desc{
+        text-align:center;
+        margin-bottom:35px;
+    }
+
+    .c4{
+        grid-template-columns:1fr;
+    }
+
+    .c5{
+        padding:22px;
+    }
+
+    .c5 i{
+        margin:auto auto 15px;
+    }
+
+    .c5 h3,
+    .c5 p{
+        text-align:center;
+    }
+
+    .c6 img{
+        max-width:100%;
+        margin-top:20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.interior-section{
+    width:100%;
+    background:#fff;
+    padding:90px 8%;
+    overflow:hidden;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+/* LEFT SIDE */
+.left-content{
+    flex:1;
+    position:relative;
+    min-height:650px;
+}
+
+/* Dot Box */
+.dot-box{
+    position:absolute;
+    top:-30px;
+    left:-20px;
+    width:180px;
+    height:180px;
+    background-image:radial-gradient(#A3B18A 2px, transparent 2px);
+    background-size:18px 18px;
+    z-index:1;
+    opacity:.8;
+}
+
+/* Main Image */
+.main-image{
+    width:100%;
+    max-width:550px;
+    height:650px;
+    border-radius:25px;
+    object-fit:cover;
+    display:block;
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+    position:relative;
+    z-index:2;
+}
+
+/* Top Floating Image */
+.top-image{
+    position:absolute;
+    top:40px;
+    right:-30px;
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    border:8px solid #fff;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    z-index:3;
+    animation:float 4s ease-in-out infinite;
+}
+
+/* Bottom Floating Image */
+.bottom-image{
+    position:absolute;
+    bottom:30px;
+    right:-50px;
+    width:250px;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+    border:8px solid #fff;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    z-index:3;
+    animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* RIGHT SIDE */
+.right-content{
+    flex:1;
+}
+
+.heading{
+    font-size:3.3rem;
+    line-height:1.2;
+    color:#000;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.heading span{
+    display:block;
+}
+
+.description{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:40px;
+    font-size:16px;
+}
+
+/* FEATURES */
+.feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.feature{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.number{
+    min-width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#A3B18A;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+}
+
+.feature h4{
+    margin-bottom:6px;
+    color:#000;
+}
+
+.feature p{
+    color:#666;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* BUTTON */
+.view-btn{
+    display:inline-block;
+    padding:16px 35px;
+    background:#fff;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    transition:.4s;
+}
+
+.view-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* TABLET */
+@media(max-width:991px){
+
+.container{
+    flex-direction:column;
+    gap:60px;
+}
+
+.left-content{
+    width:100%;
+    min-height:550px;
+}
+
+.main-image{
+    max-width:100%;
+    height:550px;
+}
+
+.heading{
+    font-size:2.5rem;
+}
+
+.feature-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.interior-section{
+    padding:70px 20px;
+}
+
+.left-content{
+    min-height:430px;
+}
+
+.main-image{
+    height:430px;
+}
+
+.top-image{
+    width:140px;
+    height:140px;
+    right:-10px;
+}
+
+.bottom-image{
+    width:160px;
+    height:120px;
+    right:-10px;
+}
+
+.dot-box{
+    width:120px;
+    height:120px;
+}
+
+.heading{
+    font-size:2rem;
+}
+
+.description{
+    font-size:15px;
+}
+
+.number{
+    min-width:42px;
+    height:42px;
+}
+
+.view-btn{
+    width:100%;
+    text-align:center;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.features-section{
+    width:100%;
+    padding:80px 6%;
+    overflow:hidden;
+    background:#fff;
+}
+
+/* Moving Row */
+.features-track{
+    display:flex;
+    align-items:center;
+    gap:70px;
+    width:max-content;
+    animation: moveLeft 20s linear infinite;
+}
+
+.features-track:hover{
+    animation-play-state: paused;
+}
+
+@keyframes moveLeft{
+    0%{
+        transform:translateX(0);
+    }
+    50%{
+        transform:translateX(-120px);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+
+/* Item */
+.feature-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    min-width:350px;
+    transition:.5s ease;
+}
+
+.feature-item:hover{
+    transform:translateY(-8px);
+}
+
+/* Image */
+.feature-image{
+    width:90px;
+    height:90px;
+    flex-shrink:0;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+}
+
+.feature-image::before{
+    content:"";
+    position:absolute;
+    inset:-4px;
+    border-radius:50%;
+    border:2px solid #d6d6d6;
+    animation: rotateCircle 6s linear infinite;
+}
+
+@keyframes rotateCircle{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.feature-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+/* Content */
+.feature-content{
+    max-width:230px;
+}
+
+.feature-content h3{
+    font-size:20px;
+    color:#111;
+    margin-bottom:8px;
+}
+
+.feature-content p{
+    font-size:14px;
+    line-height:1.7;
+    color:#666;
+    margin-bottom:12px;
+}
+
+.feature-btn{
+    display:inline-block;
+    padding:10px 20px;
+    text-decoration:none;
+    background:#111;
+    color:#fff;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    transition:.4s;
+}
+
+.feature-btn:hover{
+    background:#ff7b00;
+    transform:translateY(-3px);
+}
+
+/* Floating Animation */
+.feature-item:nth-child(odd){
+    animation: floatUp 4s ease-in-out infinite;
+}
+
+.feature-item:nth-child(even){
+    animation: floatDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUp{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes floatDown{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(10px);
+    }
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .features-section{
+        padding:50px 20px;
+    }
+
+    .features-track{
+        gap:40px;
+        animation-duration:15s;
+    }
+
+    .feature-item{
+        min-width:300px;
+    }
+
+    .feature-image{
+        width:75px;
+        height:75px;
+    }
+
+    .feature-content h3{
+        font-size:18px;
+    }
+
+    .feature-content p{
+        font-size:13px;
+    }
+
+    .feature-btn{
+        padding:9px 18px;
+        font-size:12px;
+    }
+}
+
+@media(max-width:480px){
+
+    .feature-item{
+        min-width:270px;
+        gap:14px;
+    }
+
+    .feature-image{
+        width:65px;
+        height:65px;
+    }
+
+    .feature-content{
+        max-width:180px;
+    }
+
+    .feature-content h3{
+        font-size:16px;
+    }
+
+    .feature-content p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+    .feature-btn{
+        padding:8px 16px;
+        font-size:11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   TESTIMONIAL SECTION
+========================= */
+
+.testimonial-section{
+    width:100%;
+    background:#fff;
+    padding:100px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.testimonial-container{
+    max-width:800px;
+    width:100%;
+    text-align:center;
+    animation:fadeUp 1s ease;
+}
+
+/* Heading */
+
+.testimonial-container h2{
+    font-size:48px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:18px;
+}
+
+.testimonial-container .description{
+    max-width:650px;
+    margin:auto;
+    font-size:16px;
+    line-height:1.8;
+    color:#666;
+    margin-bottom:50px;
+}
+
+/* Profile Circle */
+
+.profile-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.profile-circle{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:linear-gradient(135deg, #2ff72fa2, #2faef7);
+    padding:5px;
+    position:relative;
+    animation:rotateGlow 8s linear infinite;
+}
+
+.profile-circle::before{
+    content:'';
+    position:absolute;
+    inset:-8px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#7B2FF7,#C084FC);
+    opacity:.2;
+    z-index:-1;
+    filter:blur(15px);
+}
+
+.profile-image{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.profile-image svg{
+    width:70px;
+    height:70px;
+    fill: #2ff72fa2;
+}
+
+/* Name */
+
+.client-name{
+    font-size:28px;
+    font-weight:600;
+    color:#111;
+    margin-bottom:8px;
+}
+
+/* Phone */
+
+.client-phone{
+    color: #40f72f;
+    font-size:16px;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+/* Comment */
+
+.client-comment{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+    font-style:italic;
+}
+
+/* Animations */
+
+@keyframes rotateGlow{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .testimonial-section{
+        padding:80px 20px;
+    }
+
+    .testimonial-container h2{
+        font-size:34px;
+    }
+
+    .description{
+        font-size:15px;
+    }
+
+    .profile-circle{
+        width:120px;
+        height:120px;
+    }
+
+    .client-name{
+        font-size:24px;
+    }
+
+    .client-comment{
+        font-size:16px;
+        line-height:1.8;
+    }
+}
+
+@media(max-width:480px){
+
+    .testimonial-container h2{
+        font-size:28px;
+    }
+
+    .description{
+        font-size:14px;
+    }
+
+    .profile-circle{
+        width:100px;
+        height:100px;
+    }
+
+    .profile-image svg{
+        width:55px;
+        height:55px;
+    }
+
+    .client-name{
+        font-size:22px;
+    }
+
+    .client-phone{
+        font-size:14px;
+    }
+
+    .client-comment{
+        font-size:14px;
+        line-height:1.7;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   INTERIOR SHOWCASE SECTION
+========================== */
+
+.orvexa-gallery-zone{
+    width:100%;
+    padding:80px 6%;
+    background:#ffffff;
+}
+
+.lunexa-heading-block{
+    margin-bottom:50px;
+}
+
+.lunexa-heading-block h2{
+    font-size:42px;
+    font-weight:700;
+    color:#111;
+    line-height:1.2;
+}
+
+.virello-content-row{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.novira-image-unit{
+    flex:1;
+}
+
+.novira-image-unit img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:14px;
+    display:block;
+}
+
+.solvix-text-copy{
+    margin-top:18px;
+}
+
+.solvix-text-copy p{
+    font-size:15px;
+    color:#666;
+    line-height:1.8;
+}
+
+/* ==========================
+   TABLET RESPONSIVE
+========================== */
+
+@media (max-width:991px){
+
+    .lunexa-heading-block h2{
+        font-size:34px;
+    }
+
+    .virello-content-row{
+        gap:20px;
+    }
+
+    .novira-image-unit img{
+        height:230px;
+    }
+
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .orvexa-gallery-zone{
+        padding:60px 20px;
+    }
+
+    .lunexa-heading-block{
+        text-align:center;
+        margin-bottom:35px;
+    }
+
+    .lunexa-heading-block h2{
+        font-size:28px;
+    }
+
+    .virello-content-row{
+        flex-direction:column;
+    }
+
+    .novira-image-unit{
+        width:100%;
+    }
+
+    .novira-image-unit img{
+        height:220px;
+    }
+
+    .solvix-text-copy{
+        text-align:center;
+    }
+
+    .solvix-text-copy p{
+        font-size:14px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+
+.novara-contact-zone{
+    padding:80px 20px 0;
+    background:#ffffff;
+    position:relative;
+}
+
+.novara-contact-card{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    border-radius:30px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 25px 80px rgba(0,0,0,0.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.novara-contact-card::before{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(55, 255, 0, 0.22);
+    border-radius:50%;
+    top:-150px;
+    left:-100px;
+    animation:floatGlow 8s infinite linear;
+}
+
+.novara-contact-card::after{
+    content:'';
+    position:absolute;
+    width:250px;
+    height:250px;
+    background: rgba(81, 193, 66, 0.41);
+    border-radius:50%;
+    right:-80px;
+    bottom:-120px;
+    animation:floatGlow 10s infinite linear reverse;
+}
+
+@keyframes floatGlow{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.novara-contact-card h2{
+    font-size:40px;
+    color:#111;
+    margin-bottom:10px;
+    position:relative;
+    z-index:2;
+}
+
+.novara-contact-card p{
+    color: #666;
+    margin-bottom:30px;
+    position:relative;
+    z-index:2;
+}
+
+.velora-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    position:relative;
+    z-index:2;
+}
+
+.velora-form input,
+.velora-form textarea{
+    width:100%;
+    padding:16px;
+    border:none;
+    background: #f7f7f7;
+    border-radius:14px;
+    outline:none;
+    font-size:15px;
+}
+
+.velora-form textarea{
+    grid-column:1/3;
+    resize:none;
+    height:140px;
+}
+
+.velora-form button{
+    grid-column:1/3;
+    padding:16px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    background:linear-gradient(135deg, #4A5A31, #4A6A5D);
+    transition:.4s;
+}
+
+.velora-form button:hover{
+    transform:translateY(-5px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.zentro-footer{
+    margin-top:-40px;
+    background: #4A6A5D;
+    color: #fff;
+    padding:130px 8% 40px;
+    position:relative;
+    overflow:hidden;
+}
+
+.zentro-footer::before{
+    content:'';
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background: #4a5a3189;
+    top:-200px;
+    right:-120px;
+    animation:rotateBg 20s linear infinite;
+}
+
+@keyframes rotateBg{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.orvexa-footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    position:relative;
+    z-index:2;
+}
+
+.footer-brand h3{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.footer-brand span{
+    color: #4A5A31;
+}
+
+.footer-brand p{
+    color: #cfcfcf;
+    line-height:1.8;
+}
+
+.footer-links h4{
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.footer-links ul{
+    list-style:none;
+}
+
+.footer-links ul li{
+    margin-bottom:12px;
+}
+
+.footer-links ul li a{
+    color: #cfcfcf;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links ul li a:hover{
+    color:#ff8c00;
+    padding-left:5px;
+}
+
+/* Social Icons */
+
+.social-orbit{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.social-orbit a{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#fff;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    transition:.4s;
+}
+
+.social-orbit a:hover{
+    background:linear-gradient(135deg, #ff8c00, #6f42c1);
+    transform:translateY(-8px) rotate(360deg);
+}
+
+/* Bottom */
+
+.aurora-bottom{
+    margin-top:50px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    color: #bdbdbd;
+    position:relative;
+    z-index:2;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .orvexa-footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .novara-contact-card{
+        padding:30px 20px;
+    }
+
+    .novara-contact-card h2{
+        font-size:30px;
+    }
+
+    .velora-form{
+        grid-template-columns:1fr;
+    }
+
+    .velora-form textarea,
+    .velora-form button{
+        grid-column:auto;
+    }
+
+    .orvexa-footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .social-orbit{
+        justify-content:center;
+    }
+
+    .zentro-footer{
+        padding:110px 20px 35px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">WOODEN</div>
+
+        <!-- Menu -->
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Icons -->
+        <div class="right-icons">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <i class="fa-solid fa-tree"></i>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="home" class="hero">
+
+    <!-- Left Side Content -->
+    <div class="hero-content">
+
+        <h1>Modern Interior</h1>
+        <h2>Design Studio</h2>
+
+        <p>
+            Transform your living space with elegant furniture, stylish lighting,
+            and modern interior concepts designed to bring comfort, beauty, and luxury into every corner of your home.
+        </p>
+
+        <div class="btn-group">
+            <a href="#" class="btn btn-primary">Click Now</a>
+            <a href="#" class="btn btn-secondary">Open</a>
+        </div>
+
+    </div>
+
+    <!-- Right Side Image -->
+    <div class="hero-image">
+
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+
+        <!-- Interior Design Image -->
+        <img src="view.png"
+        alt="Modern Interior Design">
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="about" class="A">
+
+    <div class="B">
+
+        <!-- Left Side -->
+        <div class="C">
+
+            <h1>
+                Why we are<br>
+                The best in<br>
+                Our town
+            </h1>
+
+            <p>
+                We are proud to offer premium handcrafted wooden chairs
+                designed with elegance, durability, and comfort in mind.
+                Every chair is carefully crafted using high-quality wood
+                and modern finishing techniques to create a timeless look.
+                Our products combine style and functionality, making them
+                perfect for homes, offices, and luxury interiors. With
+                attention to detail and customer satisfaction at the core
+                of our work, we continue to provide furniture that enhances
+                every space beautifully while maintaining exceptional quality
+                and long-lasting value.
+            </p>
+
+            <button class="D">
+                Increase
+            </button>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="E">
+
+            <div class="F">
+
+                <!-- Card 1 -->
+                <div class="G active">
+
+                    <img src="mak.jpg" alt="Chair">
+
+                    <h3>Classic Wood Chair</h3>
+
+                    <p>
+                        Premium handcrafted wooden chair with
+                        elegant finishing and luxury comfort.
+                    </p>
+
+                    <div class="price">$149</div>
+
+                    <div class="H">
+                        <span>↓</span>
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="G">
+
+                    <img src="laud.jpg" alt="Chair">
+
+                    <h3>Modern Dining Chair</h3>
+
+                    <p>
+                        Stylish wooden chair designed for
+                        modern dining and living spaces.
+                    </p>
+
+                    <div class="price">$179</div>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="G">
+
+                    <img src="kar.jpg" alt="Chair">
+
+                    <h3>Luxury Lounge Chair</h3>
+
+                    <p>
+                        Comfortable lounge chair crafted
+                        with premium wood materials.
+                    </p>
+
+                    <div class="price">$229</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="features" class="c1">
+
+    <div class="c2">
+
+        <!-- Left Content -->
+        <div class="c3">
+
+            <h2>Why Choose Us</h2>
+
+            <p class="desc">
+                We create premium wooden furniture with exceptional craftsmanship,
+                timeless design, and long-lasting comfort for every modern home.
+            </p>
+
+            <div class="c4">
+
+                <!-- Feature 1 -->
+                <div class="c5">
+                    <i class="fa-solid fa-tree"></i>
+                    <h3>Premium Wood</h3>
+                    <p>
+                        Carefully selected high-quality wood for durability,
+                        beauty, and long-lasting performance.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="c5">
+                    <i class="fa-solid fa-hammer"></i>
+                    <h3>Handcrafted Design</h3>
+                    <p>
+                        Every furniture piece is crafted with precision and
+                        attention to the smallest details.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="c5">
+                    <i class="fa-solid fa-couch"></i>
+                    <h3>Maximum Comfort</h3>
+                    <p>
+                        Designed to provide superior comfort while maintaining
+                        a luxurious and modern appearance.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="c5">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Eco Friendly</h3>
+                    <p>
+                        Sustainable materials and environmentally responsible
+                        production methods are always used.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Image -->
+        <div class="c6">
+            <img src="stub.jpg"
+                 alt="Wooden Chair">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section  class="interior-section">
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-content reveal">
+
+        <div class="dot-box"></div>
+
+        <img class="main-image"
+        src="peter.jpg"
+        alt="Interior">
+
+        <img class="top-image"
+        src="ccs.jpg"
+        alt="Interior">
+
+        <img class="bottom-image"
+        src="laud.jpg"
+        alt="Interior">
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-content reveal">
+
+        <h2 class="heading">
+            <span>We help you make</span>
+            <span>Modern Interior Design</span>
+        </h2>
+
+        <p class="description">
+            We create elegant, functional and modern interior spaces that
+            perfectly blend comfort, beauty and innovation. Our expert
+            designers transform your vision into stunning living spaces
+            that reflect your unique lifestyle and personality.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <div class="number">1</div>
+                <div>
+                    <h4>Creative Planning</h4>
+                    <p>Smart layouts designed to maximize beauty and functionality.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="number">2</div>
+                <div>
+                    <h4>Premium Materials</h4>
+                    <p>Carefully selected materials for luxury and durability.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="number">3</div>
+                <div>
+                    <h4>Modern Styling</h4>
+                    <p>Contemporary design elements that elevate every room.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="number">4</div>
+                <div>
+                    <h4>Perfect Execution</h4>
+                    <p>Attention to detail from concept to final completion.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="view-btn">View More</a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="features-section">
+
+    <div class="features-track">
+
+        <!-- Item 1 -->
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="bell.jpg" alt="">
+            </div>
+
+            <div class="feature-content">
+                <h3>Modern Living</h3>
+                <p>
+                    Elegant and stylish interiors designed for modern lifestyles.
+                </p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="chai.jpg" alt="">
+            </div>
+
+            <div class="feature-content">
+                <h3>Creative Space</h3>
+                <p>
+                    Smart and beautiful room concepts with premium details.
+                </p>
+                <a href="#" class="feature-btn">Explore</a>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="peter.jpg" alt="">
+            </div>
+
+            <div class="feature-content">
+                <h3>Luxury Design</h3>
+                <p>
+                    Bringing comfort, elegance and luxury into every corner.
+                </p>
+                <a href="#" class="feature-btn">Discover</a>
+            </div>
+        </div>
+
+        <!-- Duplicate Items for Infinite Motion -->
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500" alt="">
+            </div>
+
+            <div class="feature-content">
+                <h3>Modern Living</h3>
+                <p>
+                    Elegant and stylish interiors designed for modern lifestyles.
+                </p>
+                <a href="#" class="feature-btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="kar.jpg" alt="">
+            </div>
+
+            <div class="feature-content">
+                <h3>Creative Space</h3>
+                <p>
+                    Smart and beautiful room concepts with premium details.
+                </p>
+                <a href="#" class="feature-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="peter.jpg" alt="">
+            </div>
+
+            <div class="feature-content">
+                <h3>Luxury Design</h3>
+                <p>
+                    Bringing comfort, elegance and luxury into every corner.
+                </p>
+                <a href="#" class="feature-btn">Discover</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="testimonial-section">
+
+    <div class="testimonial-container">
+
+        <h2>What Our Clients Say</h2>
+
+        <p class="description">
+            We are committed to delivering exceptional service and creating
+            memorable experiences for every client. Here's what one of our
+            satisfied customers has to say about working with us.
+        </p>
+
+        <div class="profile-wrapper">
+            <div class="profile-circle">
+
+                <div class="profile-image">
+
+                    <!-- User Icon -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 
+                        2.24-5 5 2.24 5 5 5zm0 2c-3.33 
+                        0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/>
+                    </svg>
+
+                </div>
+
+            </div>
+        </div>
+
+        <h3 class="client-name">Muhammad Husnain</h3>
+
+        <p class="client-phone">+92 300 1234567</p>
+
+        <p class="client-comment">
+            "The quality of service exceeded my expectations. The team was
+            professional, responsive, and delivered exactly what I needed.
+            I highly recommend them to anyone looking for modern and reliable
+            solutions."
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="orvexa-gallery-zone">
+
+    <!-- Heading -->
+    <div class="lunexa-heading-block">
+        <h2>Modern Interior Design</h2>
+    </div>
+
+    <!-- Images + Paragraphs -->
+    <div class="virello-content-row">
+
+        <!-- Item 1 -->
+        <div class="novira-image-unit">
+            <img src="stub.jpg" alt="Interior Design">
+
+            <div class="solvix-text-copy">
+                <p>
+                    Elegant living spaces designed with comfort,
+                    luxury and modern aesthetics in mind.
+                </p>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="novira-image-unit">
+            <img src="ccs.jpg" alt="Interior Design">
+
+            <div class="solvix-text-copy">
+                <p>
+                    Contemporary interiors featuring clean lines,
+                    premium materials and timeless beauty.
+                </p>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="novira-image-unit">
+            <img src="stock.jpg" alt="Interior Design">
+
+            <div class="solvix-text-copy">
+                <p>
+                    Stylish room concepts crafted to create
+                    a welcoming and sophisticated atmosphere.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CONTACT US -->
+<section  id="contact" class="novara-contact-zone">
+
+    <div class="novara-contact-card">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Let's discuss your dream interior design project.
+        </p>
+
+        <form class="velora-form">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea placeholder="Write Your Message"></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="zentro-footer">
+
+    <div class="orvexa-footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+            <h3>Modern <span>Interior</span></h3>
+
+            <p>
+                Creating elegant, luxurious and modern living
+                spaces with innovative interior design concepts
+                that transform houses into dream homes.
+            </p>
+
+            <div class="social-orbit">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links">
+            <h4>Company</h4>
+
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+            <h4>Services</h4>
+
+            <ul>
+                <li><a href="#">Living Room</a></li>
+                <li><a href="#">Bedroom Design</a></li>
+                <li><a href="#">Office Interior</a></li>
+                <li><a href="#">Furniture</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-links">
+            <h4>Contact</h4>
+
+            <ul>
+                <li><a href="#">+92 300 1234567</a></li>
+                <li><a href="#">info@interior.com</a></li>
+                <li><a href="#">Karachi, Pakistan</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="aurora-bottom">
+        © 2026 Modern Interior Design. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Simple Button Animation
+document.querySelectorAll('.btn').forEach(button=>{
+    button.addEventListener('click',function(){
+        this.style.transform='scale(0.95)';
+        setTimeout(()=>{
+            this.style.transform='';
+        },150);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Arrow Button Click Effect
+const arrowBtn = document.querySelector('.H');
+
+arrowBtn.addEventListener('click', () => {
+    arrowBtn.style.transform = "rotate(180deg)";
+    
+    setTimeout(() => {
+        arrowBtn.style.transform = "rotate(0deg)";
+    }, 600);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scroll Reveal Animation */
+
+const cards = document.querySelectorAll('.c5');
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.2
+});
+
+cards.forEach(card=>{
+    observer.observe(card);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+    revealElements.forEach(element=>{
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            element.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Direction Change Animation
+const track = document.querySelector('.features-track');
+
+let reverse = false;
+
+setInterval(() => {
+    
+    if(reverse){
+        track.style.animation = "moveLeft 20s linear infinite";
+    }else{
+        track.style.animation = "moveRight 20s linear infinite";
+    }
+
+    reverse = !reverse;
+
+}, 10000);
+
+const style = document.createElement('style');
+
+style.innerHTML = `
+@keyframes moveRight{
+    0%{transform:translateX(-120px);}
+    50%{transform:translateX(0);}
+    100%{transform:translateX(-120px);}
+}
+`;
+
+document.head.appendChild(style);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Smooth Floating Effect
+
+const profile = document.querySelector('.profile-circle');
+
+let direction = 1;
+
+setInterval(() => {
+    profile.style.transform =
+    `translateY(${direction * -8}px) rotate(${direction * 180}deg)`;
+
+    direction *= -1;
+}, 2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JavaScript File Included
+// Future functionality can be added here.
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Interior Showcase Loaded Successfully");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Contact Form Demo
+document.querySelector(".velora-form").addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const button = this.querySelector("button");
+
+    button.innerHTML = "Message Sent ✓";
+
+    button.style.background =
+    "linear-gradient(135deg,#28a745,#4CAF50)";
+
+    setTimeout(()=>{
+        button.innerHTML = "Send Message";
+        button.style.background =
+        "linear-gradient(135deg,#ff8c00,#6f42c1)";
+    },3000);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
